@@ -1,3 +1,4 @@
+use itertools::Itertools;
 use std::fs;
 
 fn get_calorie_per_inventory() -> Vec<i32> {
@@ -14,13 +15,13 @@ fn get_calorie_per_inventory() -> Vec<i32> {
 }
 
 fn main() {
-    let mut three_largest_calorie_inventories = get_calorie_per_inventory();
-    three_largest_calorie_inventories.sort();
-    three_largest_calorie_inventories.reverse();
-    three_largest_calorie_inventories.truncate(3);
-
     println!(
         "Highest calorie inventory: {}",
-        three_largest_calorie_inventories.iter().sum::<i32>()
+        get_calorie_per_inventory()
+            .iter()
+            .sorted()
+            .rev()
+            .take(3)
+            .sum::<i32>()
     );
 }
