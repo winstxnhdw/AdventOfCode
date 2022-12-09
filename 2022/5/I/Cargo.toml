@@ -1,0 +1,5 @@
+[package]
+name = "i"
+version = "0.1.0"
+authors = ["winstxnhdw"]
+edition = "2021"
