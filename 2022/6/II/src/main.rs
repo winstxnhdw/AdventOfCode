@@ -39,7 +39,7 @@ fn get_start_of_packet_marker() -> i32 {
 
 fn main() {
     println!(
-        "Characters before the first start-of-packet marker: {}",
+        "Characters that need to be processed before the first start-of-message marker: {}",
         get_start_of_packet_marker()
     );
 }

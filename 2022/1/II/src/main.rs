@@ -16,7 +16,7 @@ fn get_calorie_per_inventory() -> Vec<i32> {
 
 fn main() {
     println!(
-        "Highest calorie inventory: {}",
+        "Sum of the top three highest calorie inventory: {}",
         get_calorie_per_inventory()
             .iter()
             .sorted()

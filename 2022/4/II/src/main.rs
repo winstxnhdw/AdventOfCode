@@ -29,7 +29,7 @@ fn check_if_assignments_overlap(pair_assignment: &Vec<Vec<i32>>) -> bool {
 
 fn main() {
     println!(
-        "Number of pairs that have assignments that fully contain the other: {}",
+        "Number of pairs that have assignments that overlap at all: {}",
         get_section_assignments()
             .iter()
             .map(check_if_assignments_overlap)

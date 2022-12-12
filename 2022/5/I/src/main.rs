@@ -93,7 +93,7 @@ fn main() {
     let rearranged_stack = rearrange(&drawing_vector, &procedure_vector);
 
     println!(
-        "{:?}",
+        "Crates that end up on top of each stack: {:?}",
         rearranged_stack
             .iter()
             .map(|stack| stack.last().unwrap())
