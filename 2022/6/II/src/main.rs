@@ -21,6 +21,10 @@ fn get_start_of_packet_marker() -> i32 {
     let mut start_slice: i32 = 0;
 
     loop {
+        if start_slice + slice_length > datastream_buffer.len() as i32 {
+            panic!("No start-of-packet marker found!");
+        }
+
         let end_slice: i32 = start_slice + slice_length;
         let start_of_packet_marker = &datastream_buffer[start_slice as usize..end_slice as usize];
         let next_start_index = get_next_start_index(start_of_packet_marker);
